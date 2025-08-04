@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elegance & Grace Boutique</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.jpg" alt="Elegance & Grace Boutique Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Where Class Meets Favor</h1>
+    <p>Affordable fashion and shapewear to make you look expensive & feel confident</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Elegance & Grace Boutique offers timeless fashion pieces that enhance confidence and class. We specialize in shapewear, dresses, and seasonal wardrobe essentials for every woman.</p>
+  </section>
+
+  <section id="products" class="products-section">
+    <h2>Featured Products</h2>
+    <main class="page-content" id="productCards"></main>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>WhatsApp: <a href="https://wa.me/27615872353">061 587 2353</a></p>
+    <p>Email: <a href="mailto:mngomezulukhanyi@gmail.com">mngomezulukhanyi@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/khanyi_mngomezulu">@khanyi_mngomezulu</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Elegance & Grace Boutique</p>
+    <p><a href="#top" style="color: white; text-decoration: underline;">Back to top</a></p>
+  </footer>
+
+  <script>
+    const cards = [
+      {
+        title: 'Waist Trainer',
+        copy: '25 Steel Boned Latex Waist Trainer Belly Slimming Belt. Price: R500',
+        button: 'Order via WhatsApp',
+        img: 'images/25steelbonewaitstrainer.jpg'
+      },
+      {
+        title: 'Smart Casual Dress',
+        copy: 'Smart Casual Dress - Black. Price: R360',
+        button: 'Order via WhatsApp',
+        img: 'images/smartcasualblackdress1.jpg'
+      },
+      {
+        title: 'Ladies Winter Jacket',
+        copy: 'Stylish & warm. Price: R540',
+        button: 'Order via WhatsApp',
+        img: 'images/ladieswinterjacket1.jpg'
+      },
+      {
+        title: 'Elegant 2 Piece Set',
+        copy: 'Perfect for all occasions. Price: R480',
+        button: 'Order via WhatsApp',
+        img: 'images/elegant2piecedressset1.jpg'
+      },
+      {
+        title: 'Black Elegant Dress',
+        copy: 'Elegant long sleeve dress. Price: R360',
+        button: 'Order via WhatsApp',
+        img: 'images/blackelegantlongsleevdress1.jpg'
+      },
+      {
+        title: 'Ladies Satin Skirt',
+        copy: 'Satin skirt for all seasons. Price: R300',
+        button: 'Order via WhatsApp',
+        img: 'images/ladiessatinskirt1.jpg'
+      }
+    ];
+
+    const container = document.getElementById('productCards');
+
+    cards.forEach(card => {
+      const cardEl = document.createElement('div');
+      cardEl.className = 'card';
+      cardEl.style.backgroundImage = `url('${card.img}')`;
+
+      cardEl.innerHTML = `
+        <div class="content">
+          <h2 class="title">${card.title}</h2>
+          <p class="copy">${card.copy}</p>
+          <a href="https://wa.me/27615872353" class="btn">${card.button}</a>
+        </div>
+      `;
+
+      container.appendChild(cardEl);
+    });
+  </script>
+</body>
+</html>
